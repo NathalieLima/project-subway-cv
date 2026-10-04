@@ -1,0 +1,15 @@
+from enum import Enum
+
+
+class Estado(str, Enum):
+    CENTRO = "CENTRO"
+    ESQUERDA = "ESQUERDA"
+    DIREITA = "DIREITA"
+    PULO = "PULO"
+    AGACHADO = "AGACHADO"
+    REINICIAR = "REINICIAR"
+    SEM_POSE = "SEM_POSE"
+
+
+ESTADOS_LATERAIS = {Estado.ESQUERDA, Estado.CENTRO, Estado.DIREITA}
+ESTADOS_MOMENTANEOS = {Estado.PULO, Estado.AGACHADO, Estado.REINICIAR}
